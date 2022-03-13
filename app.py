@@ -3,13 +3,13 @@ class Human:
         self.name = name
         self.age = age
         self.ethnicity = ethnicity
-    
-    def introduce(self):
-        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
 class Person(Human):
     def __init__(self, name, age, ethnicity):
         super().__init__(name, age, ethnicity)
+
+    def introduce(self):
+        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
 Johnny = Person("Johnny", "21", "Vietnamese")
 jintro = Johnny.introduce()
