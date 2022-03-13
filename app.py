@@ -1,5 +1,3 @@
-from abc import ABC, abstractmethod
-
 class Human:
     def __init__(self, age, ethnicity):
         self.age = age
@@ -28,6 +26,6 @@ class Tyler(Human):
 
         print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
-Johnny("Johnny", "don't trip", "Vietnamese")
-Jonathan("Jonathan", "idk", "Chinese")
+Johnny("Johnny", "21", "Vietnamese")
+Jonathan("Jonathan", "27", "Chinese")
 Tyler("Tyler", "probably 14", "Vietnamese")
