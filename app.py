@@ -1,31 +1,21 @@
 class Human:
-    def __init__(self, age, ethnicity):
+    def __init__(self, name, age, ethnicity):
+        self.name = name
         self.age = age
         self.ethnicity = ethnicity
-
-class Johnny(Human):
-    def __init__(self, name, age, ethnicity):
-        super().__init__(age, ethnicity)
-        self.name = name
-
+    
+    def introduce(self):
         print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
-
-class Jonathan(Human):
+class Person(Human):
     def __init__(self, name, age, ethnicity):
-        super().__init__(age, ethnicity)
-        self.name = name
-        
-        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
+        super().__init__(name, age, ethnicity)
 
+Johnny = Person("Johnny", "21", "Vietnamese")
+jintro = Johnny.introduce()
 
-class Tyler(Human):
-    def __init__(self, name, age, ethnicity):
-        super().__init__(age, ethnicity)
-        self.name = name
+Jonathan = Person("Jonathan", "27", "Chinese")
+j2intro = Jonathan.introduce()
 
-        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
-
-Johnny("Johnny", "21", "Vietnamese")
-Jonathan("Jonathan", "27", "Chinese")
-Tyler("Tyler", "probably 14", "Vietnamese")
+Tyler = Person("Tyler", "probably 14", "Vietnamese")
+tintro = Tyler.introduce()
