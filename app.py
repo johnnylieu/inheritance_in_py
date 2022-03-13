@@ -1,26 +1,33 @@
+from abc import ABC, abstractmethod
+
 class Human:
-    def __init__(self, name, age):
-        self.name = name
+    def __init__(self, age, ethnicity):
         self.age = age
+        self.ethnicity = ethnicity
 
-class Johnny:
-    def __init__(self, name, age, race):
-        super().__init__(name, age)
-        self.race = race
+class Johnny(Human):
+    def __init__(self, name, age, ethnicity):
+        super().__init__(age, ethnicity)
+        self.name = name
 
-    def introduce(name, age, race):
-        print(f"my name is {name}, I am {age} years old and I am {race}")
-
-
-class Jonathan:
-    def introduce(name, age, race):
-        print(f"my name is {name}, I am {age} years old and I am {race}")
+        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
 
-class Tyler:
-    def introduce(name, age, race):
-        print(f"my name is {name}, I am {age} years old and I am {race}")
+class Jonathan(Human):
+    def __init__(self, name, age, ethnicity):
+        super().__init__(age, ethnicity)
+        self.name = name
+        
+        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
 
-Johnny.introduce("Johnny", "don't trip", "Vietnamese")
-Jonathan.introduce("Jonathan", "idk", "Chinese")
-Tyler.introduce("Tyler", "probably 14", "Vietnamese")
+
+class Tyler(Human):
+    def __init__(self, name, age, ethnicity):
+        super().__init__(age, ethnicity)
+        self.name = name
+
+        print(f"my name is {self.name}, I am {self.age} years old and I am {self.ethnicity}")
+
+Johnny("Johnny", "don't trip", "Vietnamese")
+Jonathan("Jonathan", "idk", "Chinese")
+Tyler("Tyler", "probably 14", "Vietnamese")
